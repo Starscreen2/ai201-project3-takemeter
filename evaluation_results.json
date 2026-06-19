@@ -1,0 +1,158 @@
+{
+  "split_sizes": {
+    "train": 159,
+    "validation": 34,
+    "test": 35
+  },
+  "baseline": {
+    "accuracy": 0.8,
+    "macro_f1": 0.7975867269984919,
+    "per_class": {
+      "strategy_tip": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      "hot_take": {
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307693
+      },
+      "reaction": {
+        "precision": 0.9333333333333333,
+        "recall": 0.7368421052631579,
+        "f1": 0.8235294117647058
+      }
+    }
+  },
+  "finetuned": {
+    "accuracy": 0.4857142857142857,
+    "macro_f1": 0.41621621621621624,
+    "per_class": {
+      "strategy_tip": {
+        "precision": 0.21428571428571427,
+        "recall": 0.75,
+        "f1": 0.3333333333333333
+      },
+      "hot_take": {
+        "precision": 0.6666666666666666,
+        "recall": 0.16666666666666666,
+        "f1": 0.26666666666666666
+      },
+      "reaction": {
+        "precision": 0.6666666666666666,
+        "recall": 0.631578947368421,
+        "f1": 0.6486486486486487
+      }
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "strategy_tip",
+      "hot_take",
+      "reaction"
+    ],
+    "matrix": [
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        5,
+        2,
+        5
+      ],
+      [
+        6,
+        1,
+        12
+      ]
+    ]
+  },
+  "wrong_examples": [
+    {
+      "text": "It's very simple it's because you'd play the game less if they made that an option. How often do people have the client open but end up playing a game once a person messages them? Riot wants you to play more and the social component is a huge driver of people playing the game. It's not because they can't code the feature that's patently ridiculous.",
+      "true_label": "hot_take",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "The game is fun but I'm playing it way more casually then when I was in HS, playing and getting stressed for like 10 rankeds a day. If I wasn't stuck in emerald with toxic diamond Smurfs I would enjoy soloQ a bit more, but playing flex with friends off-role and random aram/brawl/arena it's very fun too",
+      "true_label": "reaction",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "Unfortunately, no It still means a lot to me, still watch some pro games, and I have a good time playing when friends ask. Don\u2019t foresee myself ever playing much alone anymore, unfortunately. 34 now, too much else i could do that I find more joy in and/or is more productive.",
+      "true_label": "reaction",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "How often does your entire ARAM team get an S+?. [removed]",
+      "true_label": "reaction",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "yes, it's a fun mode, I just didn't really understand a buff with so few points left for both halves at the end of the game like that, it practically gave the victory to the enemy team",
+      "true_label": "reaction",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "Guys I unbound my alt key from the item shop price pls help. You know when you alt click an item in the shop and it says how much gold you need to afford the item? I unbound this key and now I absolutely cannot find where in the options to rebind this after going through every hotkey 3 times over... PLEASE HELP",
+      "true_label": "reaction",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "Built stuff isn't unfair imo, runes and items are both things riot already assists you with and what professor and other overlays provide is less than a good mobafire page on a second monitor",
+      "true_label": "hot_take",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "Do you know where to watch enc elimination match?. Since I cannot find it anywhere, can you tell me where to watch it on live? Is it on YouTube or twitch?",
+      "true_label": "reaction",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "EKKO: Ekko needs Locke's E takedown reset. And give Q2 an activatable so we can call back the disk when we want instead of letting the enemy know exactly when to dodge it. Just imagine the possibilities, and it wouldn't be unbalanced, it's just skill expression.",
+      "true_label": "hot_take",
+      "predicted_label": "strategy_tip"
+    },
+    {
+      "text": "I would say this season is the season I enjoy the most since the last 6 years or so.",
+      "true_label": "hot_take",
+      "predicted_label": "reaction"
+    }
+  ],
+  "sample_classifications": [
+    {
+      "text": "My fanart of Aurora from LoL that went a bit viral on Twitter, hope you guys like it!",
+      "predicted_label": "reaction",
+      "confidence": 0.4045
+    },
+    {
+      "text": "It's very simple it's because you'd play the game less if they made that an option. How often do people have the client open but end up playing a game once a person messages them? Riot wants you to play more and the social component is a huge driver of people playing the game. It's not because they can't code the feature that's patently ridiculous.",
+      "predicted_label": "strategy_tip",
+      "confidence": 0.3637
+    },
+    {
+      "text": "The game is fun but I'm playing it way more casually then when I was in HS, playing and getting stressed for like 10 rankeds a day. If I wasn't stuck in emerald with toxic diamond Smurfs I would enjoy soloQ a bit more, but playing flex with friends off-role and random aram/brawl/arena it's very fun too",
+      "predicted_label": "strategy_tip",
+      "confidence": 0.3517
+    },
+    {
+      "text": "What about a grand-ma character, R?. [removed]",
+      "predicted_label": "reaction",
+      "confidence": 0.3877
+    },
+    {
+      "text": "Unfortunately, no It still means a lot to me, still watch some pro games, and I have a good time playing when friends ask. Don\u2019t foresee myself ever playing much alone anymore, unfortunately. 34 now, too much else i could do that I find more joy in and/or is more productive.",
+      "predicted_label": "strategy_tip",
+      "confidence": 0.3531
+    }
+  ],
+  "hyperparameters": {
+    "base_model": "distilbert-base-uncased",
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "batch_size": 16
+  }
+}
