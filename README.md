@@ -16,11 +16,17 @@ Fine-tuned text classifier for discourse quality in **r/leagueoflegends**. Label
 
 ### Examples
 
-**strategy_tip:** "Against Zed mid, take W at level 2 and shove the first two waves so you can base for Seeker's before his level 6 all-in window."
+**strategy_tip:**
+1. "Against Zed mid, take W at level 2 and shove the first two waves so you can base for Seeker's before his level 6 all-in window."
+2. "Agreed. I feel like every game I type multiple times 'press b to heal' because after a skirmish my team will stick around with 30% HP instead of resetting."
 
-**hot_take:** "Jungle diff is the only reason this game is unplayable below Masters. Iron junglers int every game."
+**hot_take:**
+1. "Jungle diff is the only reason this game is unplayable below Masters. Iron junglers int every game."
+2. "It's very simple it's because you'd play the game less if they made that an option… Riot wants you to play more and the social component is a huge driver."
 
-**reaction:** "I just watched Faker flash into five people and somehow survive. What was that."
+**reaction:**
+1. "I just watched Faker flash into five people and somehow survive. What was that."
+2. "The game is fun but I'm playing it way more casually than when I was in HS… stuck in emerald with toxic diamond Smurfs I would enjoy soloQ a bit more."
 
 ## Dataset
 
@@ -56,13 +62,35 @@ No label exceeds 70%. `strategy_tip` is underrepresented — a known risk for mo
 ## Fine-Tuning
 
 - **Base model:** `distilbert-base-uncased` (Hugging Face)
-- **Training:** Local MPS/CPU via `scripts/train_eval.py` (Colab T4 equivalent in [COLAB.md](COLAB.md))
-- **Hyperparameter decision:** Learning rate `2e-5` with **class-weighted cross-entropy** — initial training collapsed to always predicting `reaction` (53% of data); class weights penalize majority-class errors and improved macro-F1 from 0.23 → 0.42
+- **Training:** Local pipeline via `scripts/train_eval.py` (equivalent to the course Colab notebook — same 70/15/15 split, DistilBERT, and metrics). See [COLAB.md](COLAB.md) for Colab steps if you prefer T4 GPU.
+- **Hyperparameter decision:** Learning rate `2e-5` with **class-weighted cross-entropy** — without class weights, the model collapsed to always predicting `reaction` (58% of data); weights improved macro-F1 from 0.23 → 0.42 on the pre-review dataset.
 - **Other settings:** 3 epochs, batch size 16, max length 128 tokens
 
 ## Baseline
 
-Zero-shot **Groq `llama-3.3-70b-versatile`** on the same test set. Prompt in [COLAB.md](COLAB.md). API key is read from `.env` (copy `.env.example` → `.env`).
+Zero-shot **Groq `llama-3.3-70b-versatile`** classifies each test example with no task-specific training. Run via `scripts/run_baseline_only.py` (loads `GROQ_API_KEY` from `.env`).
+
+**Prompt used:**
+
+```
+You are a classifier for r/leagueoflegends discourse. Assign exactly one label per post.
+
+Labels:
+- strategy_tip — Actionable gameplay, build, matchup, or macro advice with specific in-game reasoning.
+- hot_take — Bold opinion about champions, balance, or players; confident tone with little or no supporting evidence.
+- reaction — Immediate emotional response to a play, patch, or match moment; expresses feeling, not argument.
+
+Decision rules:
+- Opinion plus one bare stat without matchup or item context → hot_take.
+- Actionable advice naming abilities, items, wave states, or timings → strategy_tip.
+- Live-moment hype or venting without a balance claim → reaction.
+
+Post: {text}
+
+Respond with only one word: strategy_tip, hot_take, or reaction.
+```
+
+Results collected on the locked 15% test split (35 examples), same split as fine-tuned evaluation.
 
 ## Evaluation Report
 

@@ -5,8 +5,8 @@
     "test": 35
   },
   "baseline": {
-    "accuracy": 0.8,
-    "macro_f1": 0.7975867269984919,
+    "accuracy": 0.9142857142857143,
+    "macro_f1": 0.8787524366471735,
     "per_class": {
       "strategy_tip": {
         "precision": 0.6666666666666666,
@@ -14,35 +14,35 @@
         "f1": 0.8
       },
       "hot_take": {
-        "precision": 0.7142857142857143,
-        "recall": 0.8333333333333334,
-        "f1": 0.7692307692307693
+        "precision": 0.8571428571428571,
+        "recall": 0.9230769230769231,
+        "f1": 0.8888888888888888
       },
       "reaction": {
-        "precision": 0.9333333333333333,
-        "recall": 0.7368421052631579,
-        "f1": 0.8235294117647058
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526315
       }
     }
   },
   "finetuned": {
-    "accuracy": 0.4857142857142857,
-    "macro_f1": 0.41621621621621624,
+    "accuracy": 0.6285714285714286,
+    "macro_f1": 0.6759013282732448,
     "per_class": {
       "strategy_tip": {
-        "precision": 0.21428571428571427,
-        "recall": 0.75,
-        "f1": 0.3333333333333333
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8
       },
       "hot_take": {
-        "precision": 0.6666666666666666,
-        "recall": 0.16666666666666666,
-        "f1": 0.26666666666666666
+        "precision": 0.5238095238095238,
+        "recall": 0.8461538461538461,
+        "f1": 0.6470588235294118
       },
       "reaction": {
-        "precision": 0.6666666666666666,
-        "recall": 0.631578947368421,
-        "f1": 0.6486486486486487
+        "precision": 0.8181818181818182,
+        "recall": 0.45,
+        "f1": 0.5806451612903226
       }
     }
   },
@@ -54,99 +54,99 @@
     ],
     "matrix": [
       [
-        3,
-        0,
-        1
-      ],
-      [
-        5,
         2,
-        5
+        0,
+        0
       ],
       [
-        6,
+        0,
+        11,
+        2
+      ],
+      [
         1,
-        12
+        10,
+        9
       ]
     ]
   },
   "wrong_examples": [
     {
-      "text": "It's very simple it's because you'd play the game less if they made that an option. How often do people have the client open but end up playing a game once a person messages them? Riot wants you to play more and the social component is a huge driver of people playing the game. It's not because they can't code the feature that's patently ridiculous.",
-      "true_label": "hot_take",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "The game is fun but I'm playing it way more casually then when I was in HS, playing and getting stressed for like 10 rankeds a day. If I wasn't stuck in emerald with toxic diamond Smurfs I would enjoy soloQ a bit more, but playing flex with friends off-role and random aram/brawl/arena it's very fun too",
-      "true_label": "reaction",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "Unfortunately, no It still means a lot to me, still watch some pro games, and I have a good time playing when friends ask. Don\u2019t foresee myself ever playing much alone anymore, unfortunately. 34 now, too much else i could do that I find more joy in and/or is more productive.",
-      "true_label": "reaction",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "How often does your entire ARAM team get an S+?. [removed]",
-      "true_label": "reaction",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "yes, it's a fun mode, I just didn't really understand a buff with so few points left for both halves at the end of the game like that, it practically gave the victory to the enemy team",
-      "true_label": "reaction",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "Guys I unbound my alt key from the item shop price pls help. You know when you alt click an item in the shop and it says how much gold you need to afford the item? I unbound this key and now I absolutely cannot find where in the options to rebind this after going through every hotkey 3 times over... PLEASE HELP",
-      "true_label": "reaction",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "Built stuff isn't unfair imo, runes and items are both things riot already assists you with and what professor and other overlays provide is less than a good mobafire page on a second monitor",
-      "true_label": "hot_take",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "Do you know where to watch enc elimination match?. Since I cannot find it anywhere, can you tell me where to watch it on live? Is it on YouTube or twitch?",
-      "true_label": "reaction",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "EKKO: Ekko needs Locke's E takedown reset. And give Q2 an activatable so we can call back the disk when we want instead of letting the enemy know exactly when to dodge it. Just imagine the possibilities, and it wouldn't be unbalanced, it's just skill expression.",
-      "true_label": "hot_take",
-      "predicted_label": "strategy_tip"
-    },
-    {
-      "text": "I would say this season is the season I enjoy the most since the last 6 years or so.",
+      "text": "First blood doesn't fo anything anymore though",
       "true_label": "hot_take",
       "predicted_label": "reaction"
+    },
+    {
+      "text": "i'm enjoying it. I keep the game fresh by maining different champs every year or so. Gone from Samira to Jhin, Sylas, Ryze and now GP",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "Malphite bots flooding iron ranked games?. [removed]",
+      "true_label": "hot_take",
+      "predicted_label": "reaction"
+    },
+    {
+      "text": "Sacrifice is the best Worlds song. I've been listening nonstop to LoL songs this morning and I read the comments under Sacrifice MV that it is underwhelming compared to the previous Worlds songs. I also thought the same when I first heard and watch the MV. But when I heard the live version during the opening ceremony last year, my view changed and I started to love it. I don't know if it's because of the Anyma remix or G.E.M's beautiful voice. Now, I feel like I've transcended everytime I hear it.",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "To ask as you may know - it seems there are 2 conflicting images being posted of the tweet One is a mushroom cloud explosion and one is a nuclear bomb falling on a city. Is one of these tweets fake? The jp responses are all posting the bomb falling onto a city but all the news \u2018articles\u2019 show just the explosion one. One seems a lot more malicious than the other",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "I'm gonna wait it out until it hits the Mythic Shop.",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "man peyz and missing on game 2 just don't want to give nip a chance and whats up with tons of penta this year",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "brazillians like to joke a lot, about everything, im not defending him but if i had to guess he meant no ill at all. but posting something like that on twitter is next level stupid",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "Server: NA Type of bug: Client-Challenges Description: Once hitting Mastery with champions they aren't checked off in the Virtuoso challenges meaning you can't get the title or the points for it. Expected Result: To have them checked off and get points/titles for getting them Mastery 5-10 Observed Result: You get the champion title for Mastery 10, but it isn't checked off in the Virtuoso challenges. Reproduction rate: Every champion that I have Mastered up from 5-10 this patch.",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
+    },
+    {
+      "text": "Every human being personally likes something more than another thing, it\u2019s not that crazy",
+      "true_label": "reaction",
+      "predicted_label": "hot_take"
     }
   ],
   "sample_classifications": [
     {
-      "text": "My fanart of Aurora from LoL that went a bit viral on Twitter, hope you guys like it!",
+      "text": "This guy is a R6 player But also, I think LoL players might the most paid in all of esport so it's a trade off I guess",
+      "predicted_label": "hot_take",
+      "confidence": 0.3624
+    },
+    {
+      "text": "I recommend starting with the support role. I think it\u2019s the easiest lane to learn the game from. You can play alongside your team and learn the basics without needing strong mechanics or macro knowledge right away. Once you\u2019ve gotten used to the game, it\u2019s not too late to switch to another lane. Just keep in mind that you\u2019ll have to deal with the occasional toxic ADC.",
+      "predicted_label": "strategy_tip",
+      "confidence": 0.3945
+    },
+    {
+      "text": "First blood doesn't fo anything anymore though",
       "predicted_label": "reaction",
-      "confidence": 0.4045
+      "confidence": 0.3678
     },
     {
-      "text": "It's very simple it's because you'd play the game less if they made that an option. How often do people have the client open but end up playing a game once a person messages them? Riot wants you to play more and the social component is a huge driver of people playing the game. It's not because they can't code the feature that's patently ridiculous.",
-      "predicted_label": "strategy_tip",
-      "confidence": 0.3637
+      "text": "i'm enjoying it. I keep the game fresh by maining different champs every year or so. Gone from Samira to Jhin, Sylas, Ryze and now GP",
+      "predicted_label": "hot_take",
+      "confidence": 0.3432
     },
     {
-      "text": "The game is fun but I'm playing it way more casually then when I was in HS, playing and getting stressed for like 10 rankeds a day. If I wasn't stuck in emerald with toxic diamond Smurfs I would enjoy soloQ a bit more, but playing flex with friends off-role and random aram/brawl/arena it's very fun too",
-      "predicted_label": "strategy_tip",
-      "confidence": 0.3517
-    },
-    {
-      "text": "What about a grand-ma character, R?. [removed]",
+      "text": "My friend got the last kill with Redemption on Janna Absolute cinema.",
       "predicted_label": "reaction",
-      "confidence": 0.3877
-    },
-    {
-      "text": "Unfortunately, no It still means a lot to me, still watch some pro games, and I have a good time playing when friends ask. Don\u2019t foresee myself ever playing much alone anymore, unfortunately. 34 now, too much else i could do that I find more joy in and/or is more productive.",
-      "predicted_label": "strategy_tip",
-      "confidence": 0.3531
+      "confidence": 0.3811
     }
   ],
   "hyperparameters": {

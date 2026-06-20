@@ -10,7 +10,7 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 LABELS = ("strategy_tip", "hot_take", "reaction")
-MODEL_DIR = Path(__file__).resolve().parents[1] / "finetuned_model"
+MODEL_DIR = Path(__file__).resolve().parent / "finetuned_model"
 
 
 def load_model():
